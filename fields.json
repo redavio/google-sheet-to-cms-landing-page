@@ -1,0 +1,146 @@
+{
+  "$comment": "Every field on the landing page template, in sheet order, with its character limit. The push script, the checks and the site demo all read this file.",
+  "fields": [
+    {
+      "key": "slug",
+      "header": "Slug (the page's URL path)",
+      "required": true,
+      "note": "Lowercase words and hyphens, e.g. ppc-reporting"
+    },
+    {
+      "key": "pageTitle",
+      "header": "Page title (browser tab)",
+      "limit": 60,
+      "required": true
+    },
+    {
+      "key": "headline",
+      "header": "Hero headline",
+      "limit": 60,
+      "required": true
+    },
+    {
+      "key": "subhead",
+      "header": "Hero subhead",
+      "limit": 160,
+      "required": true
+    },
+    {
+      "key": "bullet1",
+      "header": "Bullet 1",
+      "limit": 80,
+      "required": true
+    },
+    {
+      "key": "bullet2",
+      "header": "Bullet 2",
+      "limit": 80
+    },
+    {
+      "key": "bullet3",
+      "header": "Bullet 3",
+      "limit": 80
+    },
+    {
+      "key": "formHeading",
+      "header": "Form heading",
+      "limit": 40,
+      "required": true
+    },
+    {
+      "key": "formFields",
+      "header": "Form fields (comma separated)",
+      "required": true,
+      "note": "e.g. Name, Work email, Company"
+    },
+    {
+      "key": "formButton",
+      "header": "Form button",
+      "limit": 20,
+      "required": true
+    },
+    {
+      "key": "formAction",
+      "header": "Form submit URL",
+      "required": true,
+      "note": "Where the form posts: your form tool's endpoint"
+    },
+    {
+      "key": "section1Heading",
+      "header": "Section 1 heading",
+      "limit": 60,
+      "required": true
+    },
+    {
+      "key": "section1Text",
+      "header": "Section 1 text",
+      "limit": 220,
+      "required": true
+    },
+    {
+      "key": "section1Image",
+      "header": "Section 1 screenshot URL",
+      "required": true,
+      "note": "A public image URL; it's uploaded to Sanity on push"
+    },
+    {
+      "key": "section2Heading",
+      "header": "Section 2 heading",
+      "limit": 60,
+      "required": true
+    },
+    {
+      "key": "section2Text",
+      "header": "Section 2 text",
+      "limit": 220,
+      "required": true
+    },
+    {
+      "key": "section2Image",
+      "header": "Section 2 screenshot URL",
+      "required": true,
+      "note": "A public image URL; it's uploaded to Sanity on push"
+    },
+    {
+      "key": "section3Heading",
+      "header": "Section 3 heading",
+      "limit": 60,
+      "required": true
+    },
+    {
+      "key": "section3Text",
+      "header": "Section 3 text",
+      "limit": 220,
+      "required": true
+    },
+    {
+      "key": "section3Image",
+      "header": "Section 3 screenshot URL",
+      "required": true,
+      "note": "A public image URL; it's uploaded to Sanity on push"
+    },
+    {
+      "key": "section4Heading",
+      "header": "Section 4 heading",
+      "limit": 60,
+      "required": true
+    },
+    {
+      "key": "section4Text",
+      "header": "Section 4 text",
+      "limit": 220,
+      "required": true
+    },
+    {
+      "key": "section4Image",
+      "header": "Section 4 screenshot URL",
+      "required": true,
+      "note": "A public image URL; it's uploaded to Sanity on push"
+    },
+    {
+      "key": "footer",
+      "header": "Footer text",
+      "limit": 120
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "google-sheet-to-cms-landing-page",
+  "version": "1.0.0",
+  "description": "Write landing pages in a Google Sheet, check every field against the template, and push them to Sanity as drafts.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20.12" },
+  "scripts": {
+    "check": "node scripts/push.mjs",
+    "push": "node scripts/push.mjs --apply",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@sanity/client": "8.14.1"
+  }
+}
