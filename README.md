@@ -60,7 +60,7 @@ To push straight into another CMS, add one file to `cms/` (copy `cms/json.mjs`) 
 
 ## Adapt it to your own setup
 
-Every field, its header and its limit live in `fields.json`. Add, remove or resize fields there and in the schema to fit another page type. The form posts to the submit URL you set per page, so point it at your form tool or CRM.
+It isn't only for landing pages. Every field, its header and its limit live in `fields.json`: change them (and the schema) for feature pages, comparison pages or any page with a fixed layout. The form posts to the submit URL you set per page, so point it at your form tool or CRM.
 
 ## In Claude Code
 
