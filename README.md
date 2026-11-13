@@ -57,6 +57,17 @@ To push straight into another CMS, add one file to `cms/` (copy `cms/json.mjs`) 
 - `next/LandingPage.tsx`: the page template (React and Tailwind). It takes the same page shape whatever your CMS.
 - `next/page.tsx`: a sample Next.js route that loads a published page from Sanity by slug.
 - `sanity/landingPage.ts`: the Sanity schema, with the same limits, so Studio flags the same problems.
+- `sanity/structure.ts`, `next/draft-mode-route.ts`: optional, for reviewing drafts (below).
+
+## Review pages before you publish (Sanity)
+
+Pushed pages are drafts. To let whoever reviews them see each page as it will look, add the Preview tab:
+
+1. `npm install sanity-plugin-iframe-pane next-sanity` in your site.
+2. Add `sanity/structure.ts` to your Studio and pass `defaultDocumentNode` to `structureTool` in `sanity.config.ts`.
+3. Add `next/draft-mode-route.ts` as `app/api/draft-mode/enable/route.ts`, and `next/page.tsx` as `app/lp/[slug]/page.tsx`. Set `SANITY_READ_TOKEN` (Viewer access).
+
+In the Studio, open **Landing page**, pick a page, and switch between the **Edit** and **Preview** tabs. Publish when it looks right.
 
 ## Adapt it to your own setup
 
