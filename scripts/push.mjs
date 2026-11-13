@@ -6,7 +6,7 @@
 //   node scripts/push.mjs <google-sheet-link | file.csv> --apply --cms json
 //
 // --cms picks a file in cms/ (default: the CMS setting in .env, else sanity). Sanity saves
-// drafts; json writes files for any other CMS. Adding a CMS = one file in cms/ with save(pages).
+// drafts; json writes files to import into another CMS. Adding a CMS = one file in cms/ with save(pages).
 import { readFileSync, existsSync } from "node:fs";
 import { check, csvUrl, parseCsv, readPages } from "./lib.mjs";
 

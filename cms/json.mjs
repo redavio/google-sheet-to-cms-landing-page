@@ -1,6 +1,5 @@
-// Any other CMS: writes one JSON file per page to out/<slug>.json, in the same shape as the
-// Sanity document. Import them with your CMS's API or importer (Contentful, Strapi, Payload,
-// Storyblok, Webflow...). Screenshots stay as URLs.
+// Other CMSs: writes one JSON file per page to out/<slug>.json, in the same shape as the
+// Sanity document. Import them with your CMS's API or importer. Screenshots stay as URLs.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { toDoc } from "../scripts/lib.mjs";
 

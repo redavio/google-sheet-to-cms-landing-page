@@ -1,6 +1,6 @@
 # google-sheet-to-cms-landing-page
 
-Write landing pages in a Google Sheet, check every field against its character limit, and push them to your CMS. Sanity is built in (pages land as drafts you review and publish); for any other headless CMS it writes one JSON file per page. Nothing goes live from here.
+Write landing pages in a Google Sheet, check every field against its character limit, and push them to your CMS. Sanity is built in (pages land as drafts you review and publish). For other CMSs it writes one JSON file per page that you can import. Nothing goes live from here.
 
 Built for performance marketers working with product marketing: the copy is written and approved in the sheet, and the pages ship the same day.
 
@@ -48,7 +48,7 @@ A CSV file works in place of the link. If any page has a problem (empty field, t
 | `--cms` | What it does |
 |---|---|
 | `sanity` | Uploads each screenshot, then saves every page in one transaction as a draft (`drafts.landingPage.<slug>`). Review and publish in Sanity Studio. |
-| `json` | Writes `out/<slug>.json` per page, screenshots as URLs. Import them into Contentful, Strapi, Payload, Storyblok or any CMS with an API or importer. |
+| `json` | Writes `out/<slug>.json` per page, screenshots as URLs. Import them with your CMS's API or importer. |
 
 To push straight into another CMS, add one file to `cms/` (copy `cms/json.mjs`) that exports `save(pages)`, then run with `--cms <its name>`.
 
@@ -75,3 +75,5 @@ npm test
 ## License
 
 MIT
+
+Sanity is a trademark of Sanity AS. Google Sheets is a trademark of Google LLC. This project is not affiliated with or endorsed by either company.
