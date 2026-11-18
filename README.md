@@ -43,6 +43,28 @@ node scripts/push.mjs "<sheet link>" --apply --cms json   # or pick one per run
 
 A CSV file works in place of the link. If any page has a problem (empty field, text over its limit, bad slug or URL), it lists them and saves nothing.
 
+Add `--json results.json` to any run to also write the check report (every page's fields, values and problems, plus a summary) for the dashboard.
+
+## Dashboard
+
+A small React app that shows the check report: every page ready or blocked, each page's fields against their limits, and a preview of each page in the landing page layout.
+
+```bash
+npm run check -- "<sheet link or file.csv>" --json dashboard/public/results.json
+cd dashboard && npm install && npm run dev
+```
+
+`dashboard/public/results.json` ships with the check run on `examples/landing-pages-with-a-problem.csv` (the two template pages plus one page with four problems), so you can see a report before running your own. To share it, deploy the `dashboard` folder to Vercel (or any static host) with your `results.json` in `public/`. Anyone can also open a results file with the "Open results file" button.
+
+## Make it yours
+
+This is a starting point, not a finished product. Fork it and change anything:
+
+- **Brand the dashboard.** It ships unbranded. Set your name and logo in `dashboard/src/brand.ts` and your colors at the top of `dashboard/src/style.css` (the preview's page colors are there too).
+- **Change the screens or build your own app.** Everything on screen comes from one file, `results.json`. Build your own React app, internal tool or AI agent on it.
+- **Change the rules.** Fields, headers, limits and which fields are required are in `fields.json`; the checks are in `scripts/lib.mjs`.
+- **Bring another CMS.** Add one file to `cms/` (below).
+
 ## Your CMS
 
 | `--cms` | What it does |

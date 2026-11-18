@@ -1,0 +1,1102 @@
+{
+ "tool": "Google Sheet to CMS: landing pages",
+ "version": 1,
+ "checked_at": "2026-11-18T19:54:06.045Z",
+ "source": "landing-pages-with-a-problem.csv",
+ "summary": {
+  "pages": 3,
+  "passed": 2,
+  "with_problems": 1,
+  "problems": 4
+ },
+ "fields": [
+  {
+   "key": "slug",
+   "header": "Slug (the page's URL path)",
+   "limit": null,
+   "required": true,
+   "note": "Lowercase words and hyphens, e.g. ppc-reporting"
+  },
+  {
+   "key": "pageTitle",
+   "header": "Page title (browser tab)",
+   "limit": 60,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "headline",
+   "header": "Hero headline",
+   "limit": 60,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "subhead",
+   "header": "Hero subhead",
+   "limit": 160,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "bullet1",
+   "header": "Bullet 1",
+   "limit": 80,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "bullet2",
+   "header": "Bullet 2",
+   "limit": 80,
+   "required": false,
+   "note": ""
+  },
+  {
+   "key": "bullet3",
+   "header": "Bullet 3",
+   "limit": 80,
+   "required": false,
+   "note": ""
+  },
+  {
+   "key": "formHeading",
+   "header": "Form heading",
+   "limit": 40,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "formFields",
+   "header": "Form fields (comma separated)",
+   "limit": null,
+   "required": true,
+   "note": "e.g. Name, Work email, Company"
+  },
+  {
+   "key": "formButton",
+   "header": "Form button",
+   "limit": 20,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "formAction",
+   "header": "Form submit URL",
+   "limit": null,
+   "required": true,
+   "note": "Where the form posts: your form tool's endpoint"
+  },
+  {
+   "key": "section1Heading",
+   "header": "Section 1 heading",
+   "limit": 60,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "section1Text",
+   "header": "Section 1 text",
+   "limit": 220,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "section1Image",
+   "header": "Section 1 screenshot URL",
+   "limit": null,
+   "required": true,
+   "note": "A public image URL; it's uploaded to Sanity on push"
+  },
+  {
+   "key": "section2Heading",
+   "header": "Section 2 heading",
+   "limit": 60,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "section2Text",
+   "header": "Section 2 text",
+   "limit": 220,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "section2Image",
+   "header": "Section 2 screenshot URL",
+   "limit": null,
+   "required": true,
+   "note": "A public image URL; it's uploaded to Sanity on push"
+  },
+  {
+   "key": "section3Heading",
+   "header": "Section 3 heading",
+   "limit": 60,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "section3Text",
+   "header": "Section 3 text",
+   "limit": 220,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "section3Image",
+   "header": "Section 3 screenshot URL",
+   "limit": null,
+   "required": true,
+   "note": "A public image URL; it's uploaded to Sanity on push"
+  },
+  {
+   "key": "section4Heading",
+   "header": "Section 4 heading",
+   "limit": 60,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "section4Text",
+   "header": "Section 4 text",
+   "limit": 220,
+   "required": true,
+   "note": ""
+  },
+  {
+   "key": "section4Image",
+   "header": "Section 4 screenshot URL",
+   "limit": null,
+   "required": true,
+   "note": "A public image URL; it's uploaded to Sanity on push"
+  },
+  {
+   "key": "footer",
+   "header": "Footer text",
+   "limit": 120,
+   "required": false,
+   "note": ""
+  }
+ ],
+ "pages": [
+  {
+   "slug": "ppc-reporting",
+   "ok": true,
+   "problems": [],
+   "fields": [
+    {
+     "key": "slug",
+     "header": "Slug (the page's URL path)",
+     "value": "ppc-reporting",
+     "length": 13,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "pageTitle",
+     "header": "Page title (browser tab)",
+     "value": "PPC reporting your CFO will read | Acme Analytics",
+     "length": 49,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "headline",
+     "header": "Hero headline",
+     "value": "PPC reports your CFO will actually read",
+     "length": 39,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "subhead",
+     "header": "Hero subhead",
+     "value": "Acme turns Google and Microsoft Ads data into a one-page weekly report, with the numbers finance asks about first.",
+     "length": 114,
+     "limit": 160,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "bullet1",
+     "header": "Bullet 1",
+     "value": "One-page weekly report, sent every Monday",
+     "length": 41,
+     "limit": 80,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "bullet2",
+     "header": "Bullet 2",
+     "value": "Spend, pipeline and cost per opportunity side by side",
+     "length": 53,
+     "limit": 80,
+     "required": false,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "bullet3",
+     "header": "Bullet 3",
+     "value": "Set up in 10 minutes, no spreadsheets",
+     "length": 37,
+     "limit": 80,
+     "required": false,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "formHeading",
+     "header": "Form heading",
+     "value": "See a sample report",
+     "length": 19,
+     "limit": 40,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "formFields",
+     "header": "Form fields (comma separated)",
+     "value": "Name, Work email, Company",
+     "length": 25,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "formButton",
+     "header": "Form button",
+     "value": "Get the sample",
+     "length": 14,
+     "limit": 20,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "formAction",
+     "header": "Form submit URL",
+     "value": "https://example.com/forms/sample-report",
+     "length": 39,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section1Heading",
+     "header": "Section 1 heading",
+     "value": "A report built for finance",
+     "length": 26,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section1Text",
+     "header": "Section 1 text",
+     "value": "Spend, pipeline and cost per opportunity lead the page, so the first question in the meeting is already answered.",
+     "length": 113,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section1Image",
+     "header": "Section 1 screenshot URL",
+     "value": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-1.png",
+     "length": 76,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section2Heading",
+     "header": "Section 2 heading",
+     "value": "Every channel in one view",
+     "length": 25,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section2Text",
+     "header": "Section 2 text",
+     "value": "Google Ads and Microsoft Ads land in one report, with the same definitions across both.",
+     "length": 87,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section2Image",
+     "header": "Section 2 screenshot URL",
+     "value": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-2.png",
+     "length": 76,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section3Heading",
+     "header": "Section 3 heading",
+     "value": "Pipeline, not just clicks",
+     "length": 25,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section3Text",
+     "header": "Section 3 text",
+     "value": "Connect your CRM and see which campaigns create opportunities, not just form fills.",
+     "length": 83,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section3Image",
+     "header": "Section 3 screenshot URL",
+     "value": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-3.png",
+     "length": 76,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section4Heading",
+     "header": "Section 4 heading",
+     "value": "Shared in one click",
+     "length": 19,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section4Text",
+     "header": "Section 4 text",
+     "value": "Send the report as a link or PDF, with the same numbers everyone sees.",
+     "length": 70,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section4Image",
+     "header": "Section 4 screenshot URL",
+     "value": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-4.png",
+     "length": 76,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "footer",
+     "header": "Footer text",
+     "value": "© 2026 Acme Analytics (a fictional example company).",
+     "length": 52,
+     "limit": 120,
+     "required": false,
+     "ok": true,
+     "problems": []
+    }
+   ],
+   "doc": {
+    "slug": "ppc-reporting",
+    "pageTitle": "PPC reporting your CFO will read | Acme Analytics",
+    "hero": {
+     "headline": "PPC reports your CFO will actually read",
+     "subhead": "Acme turns Google and Microsoft Ads data into a one-page weekly report, with the numbers finance asks about first.",
+     "bullets": [
+      "One-page weekly report, sent every Monday",
+      "Spend, pipeline and cost per opportunity side by side",
+      "Set up in 10 minutes, no spreadsheets"
+     ],
+     "form": {
+      "heading": "See a sample report",
+      "fields": [
+       "Name",
+       "Work email",
+       "Company"
+      ],
+      "button": "Get the sample",
+      "action": "https://example.com/forms/sample-report"
+     }
+    },
+    "sections": [
+     {
+      "_key": "section1",
+      "heading": "A report built for finance",
+      "text": "Spend, pipeline and cost per opportunity lead the page, so the first question in the meeting is already answered.",
+      "imageUrl": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-1.png"
+     },
+     {
+      "_key": "section2",
+      "heading": "Every channel in one view",
+      "text": "Google Ads and Microsoft Ads land in one report, with the same definitions across both.",
+      "imageUrl": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-2.png"
+     },
+     {
+      "_key": "section3",
+      "heading": "Pipeline, not just clicks",
+      "text": "Connect your CRM and see which campaigns create opportunities, not just form fills.",
+      "imageUrl": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-3.png"
+     },
+     {
+      "_key": "section4",
+      "heading": "Shared in one click",
+      "text": "Send the report as a link or PDF, with the same numbers everyone sees.",
+      "imageUrl": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-4.png"
+     }
+    ],
+    "footer": "© 2026 Acme Analytics (a fictional example company)."
+   }
+  },
+  {
+   "slug": "budget-pacing",
+   "ok": true,
+   "problems": [],
+   "fields": [
+    {
+     "key": "slug",
+     "header": "Slug (the page's URL path)",
+     "value": "budget-pacing",
+     "length": 13,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "pageTitle",
+     "header": "Page title (browser tab)",
+     "value": "Budget pacing alerts | Acme Analytics",
+     "length": 37,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "headline",
+     "header": "Hero headline",
+     "value": "Never overspend your ad budget again",
+     "length": 36,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "subhead",
+     "header": "Hero subhead",
+     "value": "Acme checks every campaign's spend against plan each morning and tells you before a budget runs hot.",
+     "length": 100,
+     "limit": 160,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "bullet1",
+     "header": "Bullet 1",
+     "value": "Daily pacing check on every campaign",
+     "length": 36,
+     "limit": 80,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "bullet2",
+     "header": "Bullet 2",
+     "value": "Alerts by email or Slack before you overspend",
+     "length": 45,
+     "limit": 80,
+     "required": false,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "bullet3",
+     "header": "Bullet 3",
+     "value": "Works with Google Ads and Microsoft Ads",
+     "length": 39,
+     "limit": 80,
+     "required": false,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "formHeading",
+     "header": "Form heading",
+     "value": "Start a free trial",
+     "length": 18,
+     "limit": 40,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "formFields",
+     "header": "Form fields (comma separated)",
+     "value": "Name, Work email",
+     "length": 16,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "formButton",
+     "header": "Form button",
+     "value": "Start free",
+     "length": 10,
+     "limit": 20,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "formAction",
+     "header": "Form submit URL",
+     "value": "https://example.com/forms/trial",
+     "length": 31,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section1Heading",
+     "header": "Section 1 heading",
+     "value": "Spend against plan, every morning",
+     "length": 33,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section1Text",
+     "header": "Section 1 text",
+     "value": "Each morning Acme compares every campaign's spend with its plan for the month to date.",
+     "length": 86,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section1Image",
+     "header": "Section 1 screenshot URL",
+     "value": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-5.png",
+     "length": 76,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section2Heading",
+     "header": "Section 2 heading",
+     "value": "Alerts before it's too late",
+     "length": 27,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section2Text",
+     "header": "Section 2 text",
+     "value": "Get an email or Slack message when a campaign is on track to overspend, with days left to fix it.",
+     "length": 97,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section2Image",
+     "header": "Section 2 screenshot URL",
+     "value": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-6.png",
+     "length": 76,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section3Heading",
+     "header": "Section 3 heading",
+     "value": "See why a campaign ran hot",
+     "length": 26,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section3Text",
+     "header": "Section 3 text",
+     "value": "See which keywords and days drove the extra spend, so the fix is obvious.",
+     "length": 73,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section3Image",
+     "header": "Section 3 screenshot URL",
+     "value": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-7.png",
+     "length": 76,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section4Heading",
+     "header": "Section 4 heading",
+     "value": "Fix it in one click",
+     "length": 19,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section4Text",
+     "header": "Section 4 text",
+     "value": "Lower a budget from the alert, or snooze it if the spend is planned.",
+     "length": 68,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section4Image",
+     "header": "Section 4 screenshot URL",
+     "value": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-8.png",
+     "length": 76,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "footer",
+     "header": "Footer text",
+     "value": "© 2026 Acme Analytics (a fictional example company).",
+     "length": 52,
+     "limit": 120,
+     "required": false,
+     "ok": true,
+     "problems": []
+    }
+   ],
+   "doc": {
+    "slug": "budget-pacing",
+    "pageTitle": "Budget pacing alerts | Acme Analytics",
+    "hero": {
+     "headline": "Never overspend your ad budget again",
+     "subhead": "Acme checks every campaign's spend against plan each morning and tells you before a budget runs hot.",
+     "bullets": [
+      "Daily pacing check on every campaign",
+      "Alerts by email or Slack before you overspend",
+      "Works with Google Ads and Microsoft Ads"
+     ],
+     "form": {
+      "heading": "Start a free trial",
+      "fields": [
+       "Name",
+       "Work email"
+      ],
+      "button": "Start free",
+      "action": "https://example.com/forms/trial"
+     }
+    },
+    "sections": [
+     {
+      "_key": "section1",
+      "heading": "Spend against plan, every morning",
+      "text": "Each morning Acme compares every campaign's spend with its plan for the month to date.",
+      "imageUrl": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-5.png"
+     },
+     {
+      "_key": "section2",
+      "heading": "Alerts before it's too late",
+      "text": "Get an email or Slack message when a campaign is on track to overspend, with days left to fix it.",
+      "imageUrl": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-6.png"
+     },
+     {
+      "_key": "section3",
+      "heading": "See why a campaign ran hot",
+      "text": "See which keywords and days drove the extra spend, so the fix is obvious.",
+      "imageUrl": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-7.png"
+     },
+     {
+      "_key": "section4",
+      "heading": "Fix it in one click",
+      "text": "Lower a budget from the alert, or snooze it if the spend is planned.",
+      "imageUrl": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-8.png"
+     }
+    ],
+    "footer": "© 2026 Acme Analytics (a fictional example company)."
+   }
+  },
+  {
+   "slug": "Agency-Reporting",
+   "ok": false,
+   "problems": [
+    {
+     "key": "headline",
+     "field": "Hero headline",
+     "problem": "is 64 characters, over 60"
+    },
+    {
+     "key": "formButton",
+     "field": "Form button",
+     "problem": "is 31 characters, over 20"
+    },
+    {
+     "key": "slug",
+     "field": "Slug (the page's URL path)",
+     "problem": "should be lowercase words and hyphens only"
+    },
+    {
+     "key": "section3Image",
+     "field": "Section 3 screenshot URL",
+     "problem": "should be a full URL starting with https://"
+    }
+   ],
+   "fields": [
+    {
+     "key": "slug",
+     "header": "Slug (the page's URL path)",
+     "value": "Agency-Reporting",
+     "length": 16,
+     "limit": null,
+     "required": true,
+     "ok": false,
+     "problems": [
+      "should be lowercase words and hyphens only"
+     ]
+    },
+    {
+     "key": "pageTitle",
+     "header": "Page title (browser tab)",
+     "value": "White-label PPC reports | Acme Analytics",
+     "length": 40,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "headline",
+     "header": "Hero headline",
+     "value": "White-label PPC reports your clients will open every single week",
+     "length": 64,
+     "limit": 60,
+     "required": true,
+     "ok": false,
+     "problems": [
+      "is 64 characters, over 60"
+     ]
+    },
+    {
+     "key": "subhead",
+     "header": "Hero subhead",
+     "value": "Send every client a branded one-page report from Google and Microsoft Ads, without building it by hand.",
+     "length": 103,
+     "limit": 160,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "bullet1",
+     "header": "Bullet 1",
+     "value": "Your logo and colors on every report",
+     "length": 36,
+     "limit": 80,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "bullet2",
+     "header": "Bullet 2",
+     "value": "One report per client, sent on your schedule",
+     "length": 44,
+     "limit": 80,
+     "required": false,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "bullet3",
+     "header": "Bullet 3",
+     "value": "",
+     "length": 0,
+     "limit": 80,
+     "required": false,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "formHeading",
+     "header": "Form heading",
+     "value": "See an agency report",
+     "length": 20,
+     "limit": 40,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "formFields",
+     "header": "Form fields (comma separated)",
+     "value": "Name, Work email, Company",
+     "length": 25,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "formButton",
+     "header": "Form button",
+     "value": "Get your free sample report now",
+     "length": 31,
+     "limit": 20,
+     "required": true,
+     "ok": false,
+     "problems": [
+      "is 31 characters, over 20"
+     ]
+    },
+    {
+     "key": "formAction",
+     "header": "Form submit URL",
+     "value": "https://example.com/forms/sample-report",
+     "length": 39,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section1Heading",
+     "header": "Section 1 heading",
+     "value": "A report built for finance",
+     "length": 26,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section1Text",
+     "header": "Section 1 text",
+     "value": "Spend, pipeline and cost per opportunity lead the page, so the first question in the meeting is already answered.",
+     "length": 113,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section1Image",
+     "header": "Section 1 screenshot URL",
+     "value": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-1.png",
+     "length": 76,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section2Heading",
+     "header": "Section 2 heading",
+     "value": "Every channel in one view",
+     "length": 25,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section2Text",
+     "header": "Section 2 text",
+     "value": "Google Ads and Microsoft Ads land in one report, with the same definitions across both.",
+     "length": 87,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section2Image",
+     "header": "Section 2 screenshot URL",
+     "value": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-2.png",
+     "length": 76,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section3Heading",
+     "header": "Section 3 heading",
+     "value": "Pipeline, not just clicks",
+     "length": 25,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section3Text",
+     "header": "Section 3 text",
+     "value": "Connect your CRM and see which campaigns create opportunities, not just form fills.",
+     "length": 83,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section3Image",
+     "header": "Section 3 screenshot URL",
+     "value": "acme-3.png",
+     "length": 10,
+     "limit": null,
+     "required": true,
+     "ok": false,
+     "problems": [
+      "should be a full URL starting with https://"
+     ]
+    },
+    {
+     "key": "section4Heading",
+     "header": "Section 4 heading",
+     "value": "Shared in one click",
+     "length": 19,
+     "limit": 60,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section4Text",
+     "header": "Section 4 text",
+     "value": "Send the report as a link or PDF, with the same numbers everyone sees.",
+     "length": 70,
+     "limit": 220,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "section4Image",
+     "header": "Section 4 screenshot URL",
+     "value": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-4.png",
+     "length": 76,
+     "limit": null,
+     "required": true,
+     "ok": true,
+     "problems": []
+    },
+    {
+     "key": "footer",
+     "header": "Footer text",
+     "value": "© 2026 Acme Analytics (a fictional example company).",
+     "length": 52,
+     "limit": 120,
+     "required": false,
+     "ok": true,
+     "problems": []
+    }
+   ],
+   "doc": {
+    "slug": "Agency-Reporting",
+    "pageTitle": "White-label PPC reports | Acme Analytics",
+    "hero": {
+     "headline": "White-label PPC reports your clients will open every single week",
+     "subhead": "Send every client a branded one-page report from Google and Microsoft Ads, without building it by hand.",
+     "bullets": [
+      "Your logo and colors on every report",
+      "One report per client, sent on your schedule"
+     ],
+     "form": {
+      "heading": "See an agency report",
+      "fields": [
+       "Name",
+       "Work email",
+       "Company"
+      ],
+      "button": "Get your free sample report now",
+      "action": "https://example.com/forms/sample-report"
+     }
+    },
+    "sections": [
+     {
+      "_key": "section1",
+      "heading": "A report built for finance",
+      "text": "Spend, pipeline and cost per opportunity lead the page, so the first question in the meeting is already answered.",
+      "imageUrl": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-1.png"
+     },
+     {
+      "_key": "section2",
+      "heading": "Every channel in one view",
+      "text": "Google Ads and Microsoft Ads land in one report, with the same definitions across both.",
+      "imageUrl": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-2.png"
+     },
+     {
+      "_key": "section3",
+      "heading": "Pipeline, not just clicks",
+      "text": "Connect your CRM and see which campaigns create opportunities, not just form fills.",
+      "imageUrl": "acme-3.png"
+     },
+     {
+      "_key": "section4",
+      "heading": "Shared in one click",
+      "text": "Send the report as a link or PDF, with the same numbers everyone sees.",
+      "imageUrl": "https://www.redavio.com/examples/google-sheet-to-cms-landing-page/acme-4.png"
+     }
+    ],
+    "footer": "© 2026 Acme Analytics (a fictional example company)."
+   }
+  }
+ ]
+}

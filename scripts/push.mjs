@@ -4,21 +4,26 @@
 //   node scripts/push.mjs <google-sheet-link | file.csv>                   check only, nothing written
 //   node scripts/push.mjs <google-sheet-link | file.csv> --apply           save every page
 //   node scripts/push.mjs <google-sheet-link | file.csv> --apply --cms json
+//   node scripts/push.mjs <google-sheet-link | file.csv> --json results.json   also write the check report
 //
+// --json writes every page's fields, values and problems to a file the dashboard (dashboard/) reads.
 // --cms picks a file in cms/ (default: the CMS setting in .env, else sanity). Sanity saves
 // drafts; json writes files to import into another CMS. Adding a CMS = one file in cms/ with save(pages).
-import { readFileSync, existsSync } from "node:fs";
-import { check, csvUrl, parseCsv, readPages } from "./lib.mjs";
+import { readFileSync, existsSync, writeFileSync } from "node:fs";
+import { check, csvUrl, parseCsv, readPages, report } from "./lib.mjs";
 
 if (existsSync(".env")) process.loadEnvFile(".env");
 
 const args = process.argv.slice(2);
 const cmsAt = args.indexOf("--cms");
 const cms = (cmsAt >= 0 ? args[cmsAt + 1] : process.env.CMS) || "sanity";
-const [source] = args.filter((a, i) => !a.startsWith("--") && !(cmsAt >= 0 && i === cmsAt + 1));
+const jsonAt = args.indexOf("--json");
+const jsonOut = jsonAt >= 0 ? args[jsonAt + 1] : "";
+const valueAt = [cmsAt, jsonAt].filter((i) => i >= 0).map((i) => i + 1);
+const [source] = args.filter((a, i) => !a.startsWith("--") && !valueAt.includes(i));
 const apply = args.includes("--apply");
 if (!source) {
-  console.log("Usage: node scripts/push.mjs <google-sheet-link | file.csv> [--apply] [--cms sanity|json]");
+  console.log("Usage: node scripts/push.mjs <google-sheet-link | file.csv> [--apply] [--cms sanity|json] [--json results.json]");
   process.exit(1);
 }
 
@@ -43,6 +48,10 @@ for (const page of pages) {
   for (const p of problems) console.log(`    ${p.field} ${p.problem}`);
 }
 console.log(`\n${pages.length} page(s), ${blocked} with problems.`);
+if (jsonOut) {
+  writeFileSync(jsonOut, JSON.stringify(report(pages, source), null, 1) + "\n");
+  console.log(`Wrote the check report to ${jsonOut}.`);
+}
 if (blocked) {
   console.log("Fix the problems above and run it again. Nothing was saved.");
   process.exit(1);

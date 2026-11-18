@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { FIELDS, check, csvUrl, parseCsv, readPages, toDoc } from "../scripts/lib.mjs";
+import { FIELDS, check, csvUrl, parseCsv, readPages, report, toDoc } from "../scripts/lib.mjs";
 
 const sample = readPages(parseCsv(readFileSync(new URL("../template/landing-pages.csv", import.meta.url), "utf8")));
 
@@ -45,4 +45,15 @@ test("a Google Sheet link becomes its CSV download", () => {
     csvUrl("https://docs.google.com/spreadsheets/d/abc123/edit?gid=42#gid=42"),
     "https://docs.google.com/spreadsheets/d/abc123/export?format=csv&gid=42",
   );
+});
+
+test("the report lists every field per page, with each problem on its field", () => {
+  const pages = [sample[0], { ...sample[1], headline: "x".repeat(61) }];
+  const r = report(pages, "template/landing-pages.csv");
+  assert.deepEqual(r.summary, { pages: 2, passed: 1, with_problems: 1, problems: 1 });
+  assert.equal(r.source, "landing-pages.csv");
+  assert.equal(r.pages[0].fields.length, FIELDS.length);
+  const headline = r.pages[1].fields.find((f) => f.key === "headline");
+  assert.deepEqual([headline.ok, headline.length, headline.limit, headline.problems], [false, 61, 60, ["is 61 characters, over 60"]]);
+  assert.deepEqual(r.pages[1].problems, [{ key: "headline", ...check(pages[1])[0] }]);
 });

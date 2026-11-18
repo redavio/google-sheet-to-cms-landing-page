@@ -97,3 +97,39 @@ export function csvUrl(url) {
   const gid = url.match(/[#&?]gid=(\d+)/)?.[1] ?? "0";
   return `https://docs.google.com/spreadsheets/d/${m[1]}/export?format=csv&gid=${gid}`;
 }
+
+/**
+ * The check as one report: every page's fields, values and problems, plus a summary.
+ * The dashboard (dashboard/) reads this. Uses check() as is, so the rules stay in one place.
+ */
+export function report(pages, source = "") {
+  const keyOf = Object.fromEntries(FIELDS.map((f) => [f.header, f.key]));
+  const rows = pages.map((page) => {
+    const problems = check(page).map((p) => ({ key: keyOf[p.field], ...p }));
+    return {
+      slug: page.slug,
+      ok: problems.length === 0,
+      problems,
+      fields: FIELDS.map((f) => {
+        const value = page[f.key] ?? "";
+        const own = problems.filter((p) => p.key === f.key).map((p) => p.problem);
+        return { key: f.key, header: f.header, value, length: value.length, limit: f.limit ?? null, required: !!f.required, ok: own.length === 0, problems: own };
+      }),
+      doc: toDoc(page),
+    };
+  });
+  return {
+    tool: "Google Sheet to CMS: landing pages",
+    version: 1,
+    checked_at: new Date().toISOString(),
+    source: /^https?:/.test(source) ? "Google Sheet" : path.basename(source),
+    summary: {
+      pages: rows.length,
+      passed: rows.filter((r) => r.ok).length,
+      with_problems: rows.filter((r) => !r.ok).length,
+      problems: rows.reduce((n, r) => n + r.problems.length, 0),
+    },
+    fields: FIELDS.map((f) => ({ key: f.key, header: f.header, limit: f.limit ?? null, required: !!f.required, note: f.note ?? "" })),
+    pages: rows,
+  };
+}
