@@ -38,9 +38,9 @@ export default function Summary({ res, show }: { res: Results; show: (slug: stri
             return (
               <tr key={p.slug}>
                 <td className={`${td} whitespace-nowrap`}>/{p.slug}</td>
-                <td className={td}>{p.doc.hero.headline}</td>
+                <td className={`${td} min-w-[180px]`}>{p.doc.hero.headline}</td>
                 <td className={`${td} whitespace-nowrap`}><Badge ok={p.ok} n={p.problems.length} /></td>
-                <td className={td}>{p.problems.length ? p.problems.map((x) => `${x.field} ${x.problem}`).join("; ") : "–"}</td>
+                <td className={`${td} min-w-[260px]`}>{p.problems.length ? p.problems.map((x) => `${x.field} ${x.problem}`).join("; ") : "–"}</td>
                 <td className={`${td} whitespace-nowrap`}>
                   <button type="button" className={ui.link} onClick={() => show(p.slug, "fields")}>Fields</button>
                   <button type="button" className={`ml-3 ${ui.link}`} onClick={() => show(p.slug, "preview")}>Preview</button>

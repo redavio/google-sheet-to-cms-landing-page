@@ -25,11 +25,11 @@ export default function Fields({ page, show }: { page: PageResult; show: (slug: 
                     <span className={`ml-1.5 rounded-full border border-zinc-200 px-1.5 py-px text-xs dark:border-zinc-700 ${ui.muted}`}>optional</span>
                   )}
                 </td>
-                <td className={`${td} max-w-[520px]`}>{f.value || <span className={ui.muted}>empty</span>}</td>
+                <td className={`${td} min-w-[200px] max-w-[520px]`}>{f.value || <span className={ui.muted}>empty</span>}</td>
                 <td className={`${td} whitespace-nowrap ${f.limit && f.length > f.limit ? ui.bad : ""}`}>
                   {f.limit ? `${f.length} / ${f.limit}` : f.length || "–"}
                 </td>
-                <td className={td}>{f.ok ? <span className="text-brand">✓</span> : <span className={ui.bad}>✕ {f.problems.join("; ")}</span>}</td>
+                <td className={`${td} min-w-[160px]`}>{f.ok ? <span className="text-brand">✓</span> : <span className={ui.bad}>✕ {f.problems.join("; ")}</span>}</td>
               </tr>
             );
           })}
