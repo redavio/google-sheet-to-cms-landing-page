@@ -21,10 +21,10 @@ export default function Preview({ page }: { page: PageResult }) {
           <span className="h-2.5 w-2.5 rounded-full bg-zinc-300 dark:bg-zinc-600" />
           <span className="ml-2">{d.pageTitle}</span>
         </div>
-        <main className="bg-white text-zinc-900">
-          <div className="grid items-center gap-10 px-5 py-8 md:grid-cols-[1.2fr_1fr] md:px-10 md:py-14">
+        <main className="bg-white text-zinc-900 @container">
+          <div className="grid items-center gap-10 px-5 py-8 @2xl:grid-cols-[1.2fr_1fr] @2xl:px-10 @2xl:py-14">
             <div>
-              <h1 className="text-balance text-[32px] font-semibold leading-tight tracking-tight md:text-[40px]">{d.hero.headline}</h1>
+              <h1 className="text-balance text-[32px] font-semibold leading-tight tracking-tight @2xl:text-[40px]">{d.hero.headline}</h1>
               <p className="mt-[18px] text-[17px] leading-relaxed text-zinc-600">{d.hero.subhead}</p>
               <ul className="mt-[22px]">
                 {d.hero.bullets.map((b) => (
@@ -49,8 +49,8 @@ export default function Preview({ page }: { page: PageResult }) {
             </form>
           </div>
           {d.sections.map((s, i) => (
-            <div key={s._key} className="grid items-center gap-10 px-5 py-8 md:grid-cols-2 md:px-10">
-              <div className={i % 2 ? "md:order-2" : ""}>
+            <div key={s._key} className="grid items-center gap-10 px-5 py-8 @2xl:grid-cols-2 @2xl:px-10">
+              <div className={i % 2 ? "@2xl:order-2" : ""}>
                 {isUrl(s.imageUrl) ? (
                   <img src={s.imageUrl} alt={s.heading} className="block w-full rounded-xl border border-zinc-200 shadow-sm" />
                 ) : (

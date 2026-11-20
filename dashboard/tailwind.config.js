@@ -1,3 +1,5 @@
+import containerQueries from "@tailwindcss/container-queries";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
@@ -10,5 +12,6 @@ export default {
       colors: { brand: "rgb(var(--brand) / <alpha-value>)" },
     },
   },
-  plugins: [],
+  // Container queries (@container, @2xl:): the page preview lays out by its own width, not the window's.
+  plugins: [containerQueries],
 };

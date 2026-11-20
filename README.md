@@ -69,8 +69,8 @@ This is a starting point, not a finished product. Fork it and change anything:
   `dashboard/src/components/` and take the result (typed in `dashboard/src/types.ts`)
   as props; they load nothing themselves. `dashboard/src/App.tsx` is the only part
   that reads `results.json`, so copy the components and types into any React +
-  Tailwind app and feed them from your own API. Add a `brand` color to your
-  Tailwind config.
+  Tailwind app and feed them from your own API. Add a `brand` color and the
+  `@tailwindcss/container-queries` plugin to your Tailwind config.
 - **Change the screens or build your own app.** Everything on screen comes from one file, `results.json`. Build your own React app, internal tool or AI agent on it.
 - **Change the rules.** Fields, headers, limits and which fields are required are in `fields.json`; the checks are in `scripts/lib.mjs`.
 - **Bring another CMS.** Add one file to `cms/` (below).
